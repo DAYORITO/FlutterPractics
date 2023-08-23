@@ -32,7 +32,7 @@ class HojaDeVida extends StatelessWidget {
             title: Text(entries[index]),
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => rutas[index]));
-            },    
+            },  
       );
     },
     separatorBuilder: (BuildContext context, int index) => const Divider(),  

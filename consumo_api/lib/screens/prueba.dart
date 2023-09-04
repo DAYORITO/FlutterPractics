@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../data/api_service.dart';
 
-class PokeApp extends StatelessWidget {
+class PokeApp extends StatefulWidget {
   PokeApp({super.key});
+  TextEditingController controlador1value= TextEditingController();
+
+  @override
+  State<PokeApp> createState() => _PokeAppState();
+}
+
+class _PokeAppState extends State<PokeApp> {
   final apiService = ApiService();
 
   @override
@@ -13,7 +20,7 @@ class PokeApp extends StatelessWidget {
           title: const Text('Poke App'),
         ),
         body: FutureBuilder(
-          future: apiService.fetchData('pokemon/5'),
+          future: apiService.fetchData('pokemon/25'),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return Center(

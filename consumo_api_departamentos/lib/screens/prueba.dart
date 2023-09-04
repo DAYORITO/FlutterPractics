@@ -13,7 +13,7 @@ class DepartamentosApp extends StatelessWidget {
         title: const Text('Departamentos de Polombia'),
       ),
       body: FutureBuilder(
-        future: apiService.fetchData(''),
+        future: apiService.fetchData(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../data/api_service.dart';
 
 class PokeApp extends StatelessWidget {
